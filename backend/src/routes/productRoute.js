@@ -1,6 +1,4 @@
 import express from "express";
-import { products } from "../data/products.js";
-import { askLLM } from "../services/llmService.js";
 import {
   askProductsController,
   getProductsController,
