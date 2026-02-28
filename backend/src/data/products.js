@@ -1,14 +1,14 @@
 export const products = [
   {
-    id: "p1",
+    id: "1",
     name: "Acer Aspire 5",
     category: "Laptop",
     price: 45000,
     description: "Budget laptop for students",
-    tags: ["budget", "student", "lightweight"],
+    tags: ["affordable, budget", "student", "lightweight"],
   },
   {
-    id: "p2",
+    id: "2",
     name: "Apple MacBook Pro",
     category: "Laptop",
     price: 120000,
@@ -16,7 +16,7 @@ export const products = [
     tags: ["premium", "professional", "powerful"],
   },
   {
-    id: "p3",
+    id: "3",
     name: "Dell XPS 13",
     category: "Laptop",
     price: 95000,
@@ -24,7 +24,7 @@ export const products = [
     tags: ["compact", "professional", "powerful"],
   },
   {
-    id: "p4",
+    id: "4",
     name: "HP Pavilion 15",
     category: "Laptop",
     price: 55000,
@@ -32,7 +32,7 @@ export const products = [
     tags: ["versatile", "everyday", "affordable"],
   },
   {
-    id: "p5",
+    id: "5",
     name: "Asus Gaming Laptop",
     category: "Laptop",
     price: 85000,
@@ -40,7 +40,7 @@ export const products = [
     tags: ["gaming", "high-performance", "powerful"],
   },
   {
-    id: "m1",
+    id: "6",
     name: "Samsung Galaxy S21",
     category: "Mobile",
     price: 70000,
@@ -48,7 +48,7 @@ export const products = [
     tags: ["flagship", "camera", "android"],
   },
   {
-    id: "m2",
+    id: "7",
     name: "Apple iPhone 13",
     category: "Mobile",
     price: 80000,
@@ -56,11 +56,27 @@ export const products = [
     tags: ["latest", "powerful", "ios"],
   },
   {
-    id: "m3",
+    id: "8",
     name: "OnePlus 9 Pro",
     category: "Mobile",
     price: 65000,
     description: "High-performance smartphone with fast charging",
     tags: ["high-performance", "fast-charging", "android", "gaming"],
+  },
+  {
+    id: "9",
+    name: "Boats Trinity",
+    category: "Headphones",
+    price: 3000,
+    description: "Affordable wireless earbuds with good sound quality",
+    tags: ["affordable", "wireless", "sound-quality"],
+  },
+  {
+    id: "10",
+    name: "Sony WH-1000XM4",
+    category: "Headphones",
+    price: 25000,
+    description: "Premium noise-canceling headphones",
+    tags: ["premium", "noise-canceling", "wireless"],
   },
 ];
