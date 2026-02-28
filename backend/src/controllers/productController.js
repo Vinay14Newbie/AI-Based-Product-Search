@@ -14,6 +14,7 @@ export const getProductsController = (req, res) => {
 
     return res.json(products);
   } catch (error) {
+    console.error("Get products error:", error);
     return res.status(500).json({
       error: "Failed to fetch products",
     });
@@ -30,12 +31,30 @@ export const askProductsController = async (req, res) => {
       });
     }
 
+    console.log("Received ask request:", { query });
+
     const result = await askLLM(query);
 
     return res.json(result);
   } catch (error) {
+    console.error("Ask products error:", error.message);
+
+    // Return different status codes based on error type
+    if (error.message.includes("COHERE_API_KEY")) {
+      return res.status(500).json({
+        error: "Server misconfiguration. Please contact support.",
+      });
+    }
+
+    if (error.message.includes("Failed to parse")) {
+      return res.status(502).json({
+        error: "AI service returned invalid response. Please try again.",
+      });
+    }
+
     return res.status(502).json({
-      error: "AI service unavailable. Please try again later.",
+      error:
+        "AI service temporarily unavailable. Please check your API key and try again.",
     });
   }
 };
